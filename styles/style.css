@@ -217,11 +217,18 @@ table {
 }
 
 /*main*/
+.main {
+  padding-block: clamp(3.125rem, 1.875rem + 6.25vw, 9.375rem);
+}
+.main__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.875rem, 0.375rem + 7.5vw, 9.375rem);
+}
 /*Секция обо мне*/
 .main__article-about {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding-block: clamp(3.125rem, 1.875rem + 6.25vw, 9.375rem);
   padding-inline: clamp(1.5625rem, 0.625rem + 4.6875vw, 6.25rem);
 }
 
@@ -284,6 +291,10 @@ table {
 }
 
 /*Секция с проектами*/
+.main {
+  padding-block: clamp(3.125rem, 1.875rem + 6.25vw, 9.375rem);
+}
+
 .main__article-projects {
   display: flex;
   flex-direction: column;
@@ -329,7 +340,7 @@ table {
   position: relative;
   overflow-x: hidden;
   width: clamp(15rem, 4.25rem + 53.75vw, 68.75rem);
-  height: clamp(12.5rem, 6.25rem + 31.25vw, 43.75rem);
+  height: clamp(11rem, 5rem + 31.25vw, 43.75rem);
 }
 
 .cards-container__card {
