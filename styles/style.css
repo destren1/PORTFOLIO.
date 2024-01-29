@@ -229,6 +229,7 @@ table {
   position: relative;
   aspect-ratio: 1;
   max-inline-size: 500px;
+  inline-size: 100%;
   background-color: var(--main-color);
 }
 
@@ -241,7 +242,7 @@ table {
   inline-size: 100%;
 }
 
-.subtitle{
+.subtitle {
   font-size: clamp(1.25rem, 0.875rem + 1.875vw, 3.125rem);
 }
 
@@ -266,6 +267,11 @@ table {
   .main__article-about {
     display: flex;
     flex-direction: column;
+  }
+
+  .article-about__square {
+    align-self: center;
+    max-width: clamp(12.5rem, 0.9615rem + 57.6923vw, 31.25rem);
   }
 
   .article-about__subtitle {
