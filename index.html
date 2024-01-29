@@ -9,10 +9,10 @@
 <body class="page">
 
 	<header class="header" id="header">
-		<section class="header__container">
+		<section class="header__navigation-container">
 		<nav class="navigation header__navigation">
 			<ul class="navigation__list">
-				<li class="navigation__item"><a class="link" href="#home">Home</a></li>
+				<li class="navigation__item navigation__item_active"><a class="link" href="#home">Home</a></li>
 				<li class="navigation__item"><a class="link" href="#about-me">About</a></li>
 			</ul>
 		</nav>
@@ -25,11 +25,11 @@
 		</nav>
 	</section>
 
-<section class="about-container">
-<img class="header__image" src="./images/background.jpg" alt="background-image">
-<div class="text-container">
-  <p class="text">My name is Ivan</p>
-  <p class="text">I'm a frontend developer</p>
+<section class="about-section header__about-container">
+<img class="about-section__image" src="./images/background.jpg" alt="background-image">
+<div class="about-section__text-container">
+  <p class="about-section__text">My name is Ivan</p>
+  <p class="about-section__text">I'm a frontend developer</p>
 </div>
 </section>
 
@@ -37,13 +37,13 @@
 
 	<main class="main">
 
-		<section class="article article-about">
-		<div class="article__square">
-			<img class="article__image" src="./images/me.jpg" alt="picture of me">
+		<section class="article-about main__article-about">
+		<div class="article-about__square">
+			<img class="article-about__image" src="./images/me.jpg" alt="picture of me">
 		</div>
 		<div>
-		<h2 class="article__about-header" id="about-me">About</h2>
-		<p class="article__about-text">Hi. My name is Ivan, and I am a frontend developer on an exciting path in the world of web technologies. In my 19th year, I am an economics major at MSU, looking to combine knowledge of economic sciences with the unique perspective of frontend development.
+		<h2 class="subtitle article-about__subtitle" id="about-me">About</h2>
+		<p class="text article-about__text">Hi. My name is Ivan, and I am a frontend developer on an exciting path in the world of web technologies. In my 19th year, I am an economics major at MSU, looking to combine knowledge of economic sciences with the unique perspective of frontend development.
 
 			<br>My passion for coding led me to participate in the Yandex.Praktikum educational program, where I delve deeper into the world of programming and web application development. Problem solving is not only my professional passion, but also a way to constantly improve myself.
 			
@@ -55,30 +55,30 @@
 	</div>
 	</section>
 
-	<section class="article-projects">
-		<h2 class="article__projects-title" id="my-projects">Projects</h2>
-		<div class="article-projects__wrapper">
+	<section class="article-projects main__article-projects">
+		<h2 class="subtitle article-projects__projects-subtitle" id="my-projects">Projects</h2>
+		<div class="article-projects__projects-wrapper">
 		<button class="button-prev article-projects__controls"></button>
-		<div class="cards-container">
-			<article class="card">
+		<div class="cards-container article-projects__cards-container">
+			<article class="card cards-container__card">
 				<a href="https://github.com/destren1/mesto-project-ff" target="_blank"><img class="card__image" src="./images/mesto.png" alt="project Mesto"></a>
-				<p class="card__text">An interactive platform where users are able to post their photos and give likes to their favorite images.</p>
+				<p class="text card__text">An interactive platform where users are able to post their photos and give likes to their favorite images.</p>
 			</article>
-			<article class="card">
+			<article class="card cards-container__card">
 				<a href="https://github.com/destren1/posmotri_v_okno" target="_blank"><img class="card__image" src="./images/posmotri-v-okno.png" alt="project posmotri-v-okno"></a>
-				<p class="card__text">A web resource that provides the ability to individually select videos by desired criteria from a suggested list, providing a personalized and efficient content search experience.</p>
+				<p class="text card__text">A web resource that provides the ability to individually select videos by desired criteria from a suggested list, providing a personalized and efficient content search experience.</p>
 			</article>
-			<article class="card">
+			<article class="card cards-container__card">
 				<a href="https://github.com/destren1/slozhno-sosredotochitsya" target="_blank"><img class="card__image" src="./images/slozhno-sosredotochitsa.png" alt="project slozhno-sosredotochitsa"></a>
-				<p class="card__text">A web page looking at the reasons for lack of concentration and providing tips on how to improve it.</p>
+				<p class="text card__text">A web page looking at the reasons for lack of concentration and providing tips on how to improve it.</p>
 			</article>
-			<article class="card">
+			<article class="card cards-container__card">
 				<a href="https://github.com/destren1/zakrivayuschiy-teg-f" target="_blank"><img class="card__image" src="./images/zakrivaushiy-teg.png" alt="project zakrivaushiy-teg"></a>
-				<p class="card__text">A webpage of personal reflection on my learning journey, where I share my experiences, describe milestones passed and lessons learned, creating a space for self-discovery and inspiration.</p>
+				<p class="text card__text">A webpage of personal reflection on my learning journey, where I share my experiences, describe milestones passed and lessons learned, creating a space for self-discovery and inspiration.</p>
 			</article>
-			<article class="card">
+			<article class="card cards-container__card">
 				<a href="https://github.com/destren1/ono-tebe-nado?tab=readme-ov-file" target="_blank"><img class="card__image" src="./images/ono-tebe-nado.PNG" alt="project ono-tebe-nado"></a>
-				<p class="card__text">Landing about the auction.</p>
+				<p class="text card__text">Landing about the auction.</p>
 			</article>
 		</div>
 		<button class="button-next article-projects__controls"></button>
@@ -89,7 +89,7 @@
 
 	<footer class="footer" id="footer-contact">
 
-		<section class="footer__container">
+		<section class="footer__navigation-container">
 			<nav class="navigation footer__navigation">
 				<ul class="navigation__list">
 					<li class="navigation__item"><a class="link" href="#header">Home</a></li>
@@ -102,8 +102,8 @@
 			</div>
 			<nav class="navigation footer__navigation">
 				<ul class="navigation__list">
-					<li class="navigation__item"><a class="link" href="#my-projects">Projects</a></li>
-					<li class="navigation__item"><a class="link" href="#footer-contact">Contact</a></li>
+					<li class="navigation__item"> <a class="link" href="#my-projects">Projects</a> </li>
+					<li class="navigation__item navigation__item_active"> <a class="link" href="#footer-contact">Contact</a></li>
 				</ul>
 			</nav>
 		</section>

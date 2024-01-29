@@ -135,18 +135,17 @@ table {
 .page {
   font-family: "Arial", Helvetica, sans-serif;
   color: var(--main-font-color);
+  background-color: var(--background-color);
 }
 
 /*Header*/
-.header {
-  inline-size: 100%;
-}
-.header__container {
+.header__navigation-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   min-block-size: clamp(2.1875rem, 2rem + 0.9375vw, 3.125rem);
   background-color: var(--secondary-color);
 }
+
 .header__title {
   justify-self: center;
   align-self: center;
@@ -155,11 +154,14 @@ table {
 }
 
 /*Навигация*/
+.navigation {
+  background-color: var(--main-color);
+}
+
 .header__navigation {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--main-color);
 }
 
 .navigation__list {
@@ -170,19 +172,15 @@ table {
 .navigation__item {
   cursor: pointer;
 }
+
+.navigation__item_active {
+  color: #fce1c0;
+  pointer-events: none;
+}
+
 .navigation__item:hover {
   color: #fce1c0;
   transition: color 0.3s ease;
-}
-.navigation__item:after {
-  content: "";
-  display: block;
-  block-size: 1px;
-  background-color: transparent;
-  transition: background-color 0.3s ease;
-}
-.navigation__item:hover::after {
-  background-color: #fce1c0;
 }
 
 .link {
@@ -192,18 +190,18 @@ table {
 }
 
 /*Приветственная секция*/
-.about-container {
+.header__about-container {
   position: relative;
   display: grid;
   justify-items: center;
   align-items: center;
-  background-color: var(--background-color);
 }
 
-.header__image {
+.about-section__image {
   width: 100%;
 }
-.text-container {
+
+.about-section__text-container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -211,32 +209,30 @@ table {
   padding: 10px;
   background-color: rgba(73, 98, 90, 0.55);
 }
-.text {
+
+.about-section__text {
   font-size: clamp(1.25rem, 0.75rem + 2.5vw, 3.75rem);
   color: #ffc67f;
   text-align: center;
 }
 
 /*main*/
-.main {
-  background-color: var(--background-color);
-}
 /*Секция обо мне*/
-.article-about {
+.main__article-about {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding-block: clamp(3.125rem, 1.875rem + 6.25vw, 9.375rem);
   padding-inline: clamp(1.5625rem, 0.625rem + 4.6875vw, 6.25rem);
 }
 
-.article__square {
+.article-about__square {
   position: relative;
   aspect-ratio: 1;
   max-inline-size: 500px;
   background-color: var(--main-color);
 }
 
-.article__image {
+.article-about__image {
   position: absolute;
   left: clamp(0.625rem, 0.25rem + 1.875vw, 2.5rem);
   top: clamp(0.625rem, 0.25rem + 1.875vw, 2.5rem);
@@ -245,47 +241,54 @@ table {
   inline-size: 100%;
 }
 
-.article__about-header {
-  margin-block-end: clamp(1.25rem, 1.125rem + 0.625vw, 1.875rem);
+.subtitle{
   font-size: clamp(1.25rem, 0.875rem + 1.875vw, 3.125rem);
+}
+
+.article-about__subtitle {
+  margin-block-end: clamp(1.25rem, 1.125rem + 0.625vw, 1.875rem);
   text-align: center;
 }
 
-.article__about-text {
+.text {
+  font-size: clamp(0.625rem, 0.5rem + 0.625vw, 1.25rem);
+}
+
+.article-about__text {
   margin-inline-start: 40px;
   padding: 10px;
   text-align: center;
-  font-size: clamp(0.625rem, 0.5rem + 0.625vw, 1.25rem);
   outline: 3px solid var(--main-color);
   background-color: rgba(73, 98, 90, 0.2);
 }
 
 @media (840px >= width) {
-  .article-about {
+  .main__article-about {
     display: flex;
     flex-direction: column;
   }
-  .article__about-header {
+
+  .article-about__subtitle {
     margin-block-start: 30px;
   }
-  .article__about-text {
+
+  .article-about__text {
     margin-inline-start: 0;
   }
 }
 
 /*Секция с проектами*/
-.article-projects {
+.main__article-projects {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.article__projects-title {
+.article-projects__projects-subtitle {
   padding-block-end: clamp(1.25rem, 1.125rem + 0.625vw, 1.875rem);
-  font-size: clamp(1.25rem, 0.875rem + 1.875vw, 3.125rem);
   text-align: center;
 }
-.article-projects__wrapper {
+.article-projects__projects-wrapper {
   display: flex;
   gap: clamp(0.625rem, 0.5rem + 0.625vw, 1.25rem);
 }
@@ -310,31 +313,35 @@ table {
 .button-prev {
   background-image: url(../images/button-slider-left.png);
 }
+
 .button-next {
   background-image: url(../images/button-slider-right.png);
 }
 
 /*Проекты*/
-.cards-container {
+.article-projects__cards-container {
   position: relative;
   overflow-x: hidden;
   width: clamp(15rem, 4.25rem + 53.75vw, 68.75rem);
   height: clamp(12.5rem, 6.25rem + 31.25vw, 43.75rem);
 }
 
-.card {
+.cards-container__card {
   position: absolute;
   left: 0;
   top: 0;
   opacity: 0;
   cursor: pointer;
 }
+
 .card__active {
   opacity: 1;
 }
+
 .card__image {
   width: 100%;
 }
+
 .card__text {
   display: flex;
   justify-content: center;
@@ -342,16 +349,11 @@ table {
   block-size: 40px;
   padding-inline: clamp(0.9375rem, 0.625rem + 1.5625vw, 2.5rem);
   padding-block: clamp(0.625rem, 0.5rem + 0.625vw, 1.25rem);
-  font-size: clamp(0.625rem, 0.5rem + 0.625vw, 1.25rem);
   background-color: var(--main-color);
 }
 
 /*footer*/
-.footer {
-  background-color: var(--main-color);
-}
-
-.footer__container {
+.footer__navigation-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   min-block-size: clamp(2.1875rem, 2rem + 0.9375vw, 3.125rem);
@@ -362,7 +364,6 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--main-color);
 }
 
 .footer__icon-container {
