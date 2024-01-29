@@ -1,45 +1,48 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Портфолио</title>
+	<title>Portfolio</title>
 	<link rel="stylesheet" href="./styles/index.css">
 </head>
 <body class="page">
-	<header class="header" id="home">
-		<div class="header__container">
+
+	<header class="header" id="header">
+		<section class="header__container">
 		<nav class="navigation header__navigation">
 			<ul class="navigation__list">
 				<li class="navigation__item"><a class="link" href="#home">Home</a></li>
-				<li class="navigation__item"><a class="link" href="#about">About</a></li>
+				<li class="navigation__item"><a class="link" href="#about-me">About</a></li>
 			</ul>
 		</nav>
 		<h1 class="header__title">PORTFOLIO.</h1>
 		<nav class="navigation header__navigation">
 			<ul class="navigation__list">
-				<li class="navigation__item"><a class="link" href="#projects">Projects</a></li>
-				<li class="navigation__item"><a class="link" href="#contact">Contact</a></li>
+				<li class="navigation__item"><a class="link" href="#my-projects">Projects</a></li>
+				<li class="navigation__item"><a class="link" href="#footer-contact">Contact</a></li>
 			</ul>
 		</nav>
-	</div>
-<div class="about-container">
-<img class="header__image" src="./images/background.jpg">
+	</section>
+
+<section class="about-container">
+<img class="header__image" src="./images/background.jpg" alt="background-image">
 <div class="text-container">
   <p class="text">My name is Ivan</p>
   <p class="text">I'm a frontend developer</p>
 </div>
-</div>
+</section>
+
 	</header>
 
 	<main class="main">
 
-		<article class="article article-about">
+		<section class="article article-about">
 		<div class="article__square">
-			<img class="article__image" src="./images/me.jpg">
+			<img class="article__image" src="./images/me.jpg" alt="picture of me">
 		</div>
 		<div>
-		<h2 class="article__about-header" id="about">About</h2>
+		<h2 class="article__about-header" id="about-me">About</h2>
 		<p class="article__about-text">Hi. My name is Ivan, and I am a frontend developer on an exciting path in the world of web technologies. In my 19th year, I am an economics major at MSU, looking to combine knowledge of economic sciences with the unique perspective of frontend development.
 
 			<br>My passion for coding led me to participate in the Yandex.Praktikum educational program, where I delve deeper into the world of programming and web application development. Problem solving is not only my professional passion, but also a way to constantly improve myself.
@@ -50,45 +53,47 @@
 			
 			<br>Let's create something amazing together! 🚀😊</p>
 	</div>
-	</article>
+	</section>
 
-	<article class="article-projects">
-		<h2 class="article__projects-title" id="projects">Projects</h2>
+	<section class="article-projects">
+		<h2 class="article__projects-title" id="my-projects">Projects</h2>
 		<div class="article-projects__wrapper">
 		<button class="button-prev article-projects__controls"></button>
 		<div class="cards-container">
-			<div class="card">
-				<a href="https://github.com/destren1/mesto-project-ff" target="_blank"><img class="card__image" src="./images/mesto.png"></a>
+			<article class="card">
+				<a href="https://github.com/destren1/mesto-project-ff" target="_blank"><img class="card__image" src="./images/mesto.png" alt="project Mesto"></a>
 				<p class="card__text">An interactive platform where users are able to post their photos and give likes to their favorite images.</p>
-			</div>
-			<div class="card">
-				<a href="https://github.com/destren1/posmotri_v_okno" target="_blank"><img class="card__image" src="./images/posmotri-v-okno.png"></a>
+			</article>
+			<article class="card">
+				<a href="https://github.com/destren1/posmotri_v_okno" target="_blank"><img class="card__image" src="./images/posmotri-v-okno.png" alt="project posmotri-v-okno"></a>
 				<p class="card__text">A web resource that provides the ability to individually select videos by desired criteria from a suggested list, providing a personalized and efficient content search experience.</p>
-			</div>
-			<div class="card">
-				<a href="https://github.com/destren1/slozhno-sosredotochitsya" target="_blank"><img class="card__image" src="./images/slozhno-sosredotochitsa.png"></a>
+			</article>
+			<article class="card">
+				<a href="https://github.com/destren1/slozhno-sosredotochitsya" target="_blank"><img class="card__image" src="./images/slozhno-sosredotochitsa.png" alt="project slozhno-sosredotochitsa"></a>
 				<p class="card__text">A web page looking at the reasons for lack of concentration and providing tips on how to improve it.</p>
-			</div>
-			<div class="card">
-				<a href="https://github.com/destren1/zakrivayuschiy-teg-f" target="_blank"><img class="card__image" src="./images/zakrivaushiy-teg.png"></a>
+			</article>
+			<article class="card">
+				<a href="https://github.com/destren1/zakrivayuschiy-teg-f" target="_blank"><img class="card__image" src="./images/zakrivaushiy-teg.png" alt="project zakrivaushiy-teg"></a>
 				<p class="card__text">A webpage of personal reflection on my learning journey, where I share my experiences, describe milestones passed and lessons learned, creating a space for self-discovery and inspiration.</p>
-			</div>
-			<div class="card">
-				<a href="https://github.com/destren1/ono-tebe-nado?tab=readme-ov-file" target="_blank"><img class="card__image" src="./images/ono-tebe-nado.PNG"></a>
+			</article>
+			<article class="card">
+				<a href="https://github.com/destren1/ono-tebe-nado?tab=readme-ov-file" target="_blank"><img class="card__image" src="./images/ono-tebe-nado.PNG" alt="project ono-tebe-nado"></a>
 				<p class="card__text">Landing about the auction.</p>
-			</div>
+			</article>
 		</div>
 		<button class="button-next article-projects__controls"></button>
 	</div>
-	</article>
+	</section>
+
 	</main>
 
-	<footer class="footer" id="contact">
-		<div class="footer__container">
+	<footer class="footer" id="footer-contact">
+
+		<section class="footer__container">
 			<nav class="navigation footer__navigation">
 				<ul class="navigation__list">
-					<li class="navigation__item"><a class="link" href="#home">Home</a></li>
-					<li class="navigation__item"><a class="link" href="#about">About</a></li>
+					<li class="navigation__item"><a class="link" href="#header">Home</a></li>
+					<li class="navigation__item"><a class="link" href="#about-me">About</a></li>
 				</ul>
 			</nav>
 			<div class="footer__icon-container">
@@ -97,11 +102,12 @@
 			</div>
 			<nav class="navigation footer__navigation">
 				<ul class="navigation__list">
-					<li class="navigation__item"><a class="link" href="#projects">Projects</a></li>
-					<li class="navigation__item"><a class="link" href="#contact">Contact</a></li>
+					<li class="navigation__item"><a class="link" href="#my-projects">Projects</a></li>
+					<li class="navigation__item"><a class="link" href="#footer-contact">Contact</a></li>
 				</ul>
 			</nav>
-		</div>
+		</section>
+
 	</footer>
 	
 	<script src="./src/script.js"></script>

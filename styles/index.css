@@ -187,16 +187,17 @@ table {
 
 .link {
   color: inherit;
-  font-size: clamp(0.625rem, 0.55rem + 0.375vw, 1rem);
+  font-size: clamp(0.625rem, 0.525rem + 0.5vw, 1.125rem);
   text-decoration: none;
 }
 
 /*Приветственная секция*/
 .about-container {
-	position: relative;
+  position: relative;
   display: grid;
   justify-items: center;
   align-items: center;
+  background-color: var(--background-color);
 }
 
 .header__image {
@@ -204,7 +205,7 @@ table {
 }
 .text-container {
   position: absolute;
-	top: 50%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;
@@ -252,8 +253,11 @@ table {
 
 .article__about-text {
   margin-inline-start: 40px;
+  padding: 10px;
   text-align: center;
   font-size: clamp(0.625rem, 0.5rem + 0.625vw, 1.25rem);
+  outline: 3px solid var(--main-color);
+  background-color: rgba(73, 98, 90, 0.2);
 }
 
 @media (840px >= width) {
