@@ -1,6 +1,6 @@
 // переменные
-const card = document.querySelectorAll(".card");
-const controls = document.querySelectorAll(".article-projects__controls");
+const card = document.querySelectorAll('.card');
+const controls = document.querySelectorAll('.article-projects__controls');
 let cardIndex = 0;
 
 // функция показа карточки
