@@ -194,8 +194,8 @@
 /*Переключение проектами*/
 .article-projects__controls {
   align-self: center;
-  inline-size: clamp(0.9375rem, 0.625rem + 1.5625vw, 2.5rem);
-  block-size: clamp(1.25rem, 0.875rem + 1.875vw, 3.125rem);
+  inline-size: clamp(1.25rem, 1rem + 1.25vw, 2.5rem);
+  block-size: clamp(1.5625rem, 1.25rem + 1.5625vw, 3.125rem);
   background-size: cover;
   background-repeat: no-repeat;
   background-color: transparent;
@@ -228,12 +228,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  opacity: 0;
   cursor: pointer;
-}
-
-.card__active {
-  opacity: 1;
 }
 
 .card__image {
